@@ -50,6 +50,7 @@ const PhotoCopierRecords = () => {
           value={problem}
           onChangeText={setProblem}
           placeholder="Describe any problem here"
+          clearButtonMode='Always'
         />
       </View>
 

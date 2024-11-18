@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, Switch, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Switch, StyleSheet, TouchableOpacity,Button } from 'react-native';
 
-const LibraryRecord = () => {
+const LabRecord= () => {
     const [damageReportChecked, setDamageReportChecked] = useState(false);
-    const [monitorChecked, setMonitorChecked] = useState(false);
-    const [cpuChecked, setCpuChecked] = useState(false);
-    const [keyboardChecked, setKeyboardChecked] = useState(false);
-    const [otherChecked, setOtherChecked] = useState(false);
+  
+
+   
 
     const renderCheckbox = (checked, onPress, label) => (
         <View style={styles.checkboxContainer}>
@@ -16,7 +15,13 @@ const LibraryRecord = () => {
             <Text>{label}</Text>
         </View>
     );
-
+    const handleSubmit = () => {
+        if (problem.trim()) {
+            Alert.alert('Problem Statement', problem);
+          } else {
+            Alert.alert('No Problem Provided', 'Please enter a problem statement.');
+          }
+      };
     return (
         <View style={styles.container}>
             <Text style={styles.header}>Lab Records</Text>
@@ -32,18 +37,15 @@ const LibraryRecord = () => {
             </View>
 
             <View style={styles.recordItem}>
-                <Text style={styles.label}>Damage Report:</Text>
+                
                 <Switch value={damageReportChecked} onValueChange={setDamageReportChecked} />
                 <Text style={styles.value}>{damageReportChecked ? 'Cleared' : 'Not Cleared'}</Text>
             </View>
 
-            <View style={styles.recordItem}>
-                <Text style={styles.label}>Barrow Items:</Text>
-                {renderCheckbox(monitorChecked, () => setMonitorChecked(!monitorChecked), "Monitor")}
-                {renderCheckbox(cpuChecked, () => setCpuChecked(!cpuChecked), "CPU")}
-                {renderCheckbox(keyboardChecked, () => setKeyboardChecked(!keyboardChecked), "Keyboard")}
-                {renderCheckbox(otherChecked, () => setOtherChecked(!otherChecked), "Other")}
-            </View>
+            
+
+                 <Button title="Submit" onPress={handleSubmit} />
+
         </View>
     );
 }
@@ -95,4 +97,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LibraryRecord;
+export default LabRecord;

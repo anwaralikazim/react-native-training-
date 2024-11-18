@@ -28,11 +28,7 @@ const LibraryRecords = () => {
         <Text style={styles.value}>2021-Arid-0159</Text>
       </View>
 
-      <View style={styles.recordItem}>
-        <Text style={styles.label}>Borrowed Books:</Text>
-        <Text style={styles.value}>1: "Programming Fundamentals"</Text>
-        <Text style={styles.value}>2: "Web Technologies"</Text>
-      </View>
+    
 
       <View style={styles.recordItem}>
         <Text style={styles.label}>Return Status:</Text>

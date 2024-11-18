@@ -1,59 +1,26 @@
-/*
- * @format
- 
-
-import {AppRegistry, ScrollView} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import * as React from 'react'
-import{View, view}from "react-native";
-import Screen from './Screen';
-//import footer from './footer';
-//import MenuItems from './scrollview';
-import  ClearanceScreen  from './(Student Clearance List Management )FYP/Applyforclearance'
-//import Home from './Home/index'
-//import Home1 from './Home/Home';
-//import Hooks from './Home/hooks'
-import LoginScreen from './(Student Clearance List Management )FYP/LoginScreen';
-import PhotoCopierRecords from './(Student Clearance List Management )FYP/PhotoCopies';
-import LibraryRecords from './(Student Clearance List Management )FYP/Library';
-const Stack = createNativeStackNavigator();
-import Canteen from './(Student Clearance List Management )FYP/CanteenRecord';
-import Count1 from'./Home/Component/component';
-import LabRecords from './(Student Clearance List Management )FYP/LabRecord' 
-
-function Students() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Screen">
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="ClearanceScreen" component={ClearanceScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-AppRegistry.registerComponent(appName, () => Book);
-*/
 /**
  * @format
  */
-import { AppRegistry,ScrollView } from 'react-native';
+import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
-//import { NavigationContainer } from '@react-navigation/native';
-//import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './StudentClearanceListManagementFYP/LoginScreen';
+//import Canteen from './StudentClearanceListManagementFYP/CanteenRecord';
+import ClearanceScreen from './StudentClearanceListManagementFYP/Applyforclearance';
+import ClearanceStatus from './StudentClearanceListManagementFYP/ClearanceRequest';
+//import Test from './StudentClearanceListManagementFYP/Test';
+//import AppNavigator from './StudentClearanceListManagementFYP/AppNavigation';
+import Main from'./.vscode/MiniStoreApp/dashboard';
+import Canteen from './StudentClearanceListManagementFYP/CanteenRecord';
+import AppNavigator from './StudentClearanceListManagementFYP/AppNavigation';
+import PhotoCopierRecords from './StudentClearanceListManagementFYP/PhotoCopies';
+import AccountDetails from './StudentClearanceListManagementFYP/AccountDetail';
+import DataCellScreen from './StudentClearanceListManagementFYP/DataCell';
+import WelcomeScreen from './StudentClearanceListManagementFYP/WelcomeScreen';
+import PendingStudent from './StudentClearanceListManagementFYP/PendingStudent';
+import ClearStudent from './StudentClearanceListManagementFYP/ClearStudent';
+import LibraryRecords from './StudentClearanceListManagementFYP/Library';
+import LabRecord from './StudentClearanceListManagementFYP/LabRecord';
 
-//import LoginScreen from './(Student Clearance List Management )FYP/LoginScreen';
-//import ClearanceScreen from './(Student Clearance List Management )FYP/Applyforclearance';
-//import Cart from './Home/Cart';
-import ShoppingCart from './Home/Cart';
-import  MyComponent from './Home/image';
-import move from ',/Home/apps';
 
+AppRegistry.registerComponent(appName, () =>LabRecord);
 
-
-
-
-AppRegistry.registerComponent(appName, () =>  move);
